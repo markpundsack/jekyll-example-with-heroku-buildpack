@@ -14,7 +14,8 @@ Clone the git repository
     git clone git@github.com:markpundsack/jekyll-heroku.git
     cd jekyll-heroku
     
-Let's test it locally:
+Let's test it locally
+---
 
     jekyll --server --auto
 

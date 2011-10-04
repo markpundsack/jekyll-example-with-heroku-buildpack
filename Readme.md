@@ -1,10 +1,53 @@
-Creating a Jekyll App on Heroku Cedar
+Creating a Jekyll App on Heroku Cedar (from GitHub)
 ===
 
 Setup Jekyll
 ---
 
-The first thing you have to do, install the jekyll gem.
+The first thing you have to do is install the jekyll gem.
+
+    gem install jekyll
+
+Clone the git repository
+---
+
+    git clone git@github.com:markpundsack/jekyll-heroku.git
+    cd jekyll-heroku
+    
+Let's test it locally:
+
+    jekyll --server --auto
+
+Open your browser and go to http://localhost:4000.
+
+You should see "Hello World".
+
+Deploying to Heroku
+---
+
+Install the Heroku gem
+
+    gem install heroku
+
+Create a Heroku app
+
+    heroku create --stack cedar
+
+Deploy!
+
+    git push heroku master
+
+Test it:
+
+    heroku open
+
+Creating a Jekyll App on Heroku Cedar (Manually)
+=== 
+
+Setup Jekyll
+---
+
+The first thing you have to do is install the jekyll gem.
 
     gem install jekyll
 
@@ -36,6 +79,11 @@ Let's create a Layout. Open _layouts/default.html and add:
     </html>
 
 Now we need an index page. Open index.html and add:
+
+    ---
+    layout: default
+    title: Jekyll Example Site
+    ---
 
     <h1>Hello World</h1>
 
@@ -73,6 +121,10 @@ Exclude all of those files
 
     echo "exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]" >> _config.yml
 
+Since Cedar will run Jekyll and generate the _site files automatically, they don't need to be check into git
+    
+    echo _site >> .gitignore
+    
 Create a git repo and commit
 
     git init .
@@ -90,5 +142,3 @@ Deploy!
 Test it:
 
     heroku open
-
-That's it!

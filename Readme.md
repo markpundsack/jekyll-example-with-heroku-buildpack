@@ -1,4 +1,4 @@
-Creating a Jekyll App on Heroku Cedar (from GitHub)
+Creating a Jekyll App on Heroku Cedar with custom Jekyll Buildpack (from GitHub)
 ===
 
 Setup Jekyll

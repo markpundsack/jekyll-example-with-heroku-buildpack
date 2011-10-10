@@ -46,7 +46,7 @@ Test it:
 
     heroku open
 
-Creating a Jekyll App on Heroku Cedar (Manually)
+Creating a Jekyll App on Heroku Cedar with custom Jekyll Buildpack (Manually)
 === 
 
 Setup Jekyll

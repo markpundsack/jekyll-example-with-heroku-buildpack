@@ -107,26 +107,7 @@ First, install the Heroku gem
 
     gem install heroku
 
-Create a Gemfile and add:
-
-    source :rubygems
-    
-    gem 'RedCloth'
-    gem 'jekyll'
-
-Create the Gemfile.lock
-
-    bundle install
-
-Create a Procfile
-
-    echo "web:	jekyll --server $PORT" > Procfile
-
-Exclude all of those files
-
-    echo "exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]" >> _config.yml
-
-Since Cedar will run Jekyll and generate the _site files automatically, they don't need to be check into git
+Since Cedar will run Jekyll and generate the _site files automatically, they don't need to be checked into git
     
     echo _site >> .gitignore
     
@@ -139,6 +120,10 @@ Create a git repo and commit
 Create a Heroku app
 
     heroku create --stack cedar
+
+Point Heroku to our custom buildpack
+
+    heroku config:add BUILDPACK_URL="http://github.com/markpundsack/heroku-buildpack-jekyll.git"
 
 Deploy!
 

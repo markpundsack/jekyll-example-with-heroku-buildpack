@@ -52,7 +52,7 @@ Creating a Jekyll App with a Custom Jekyll Buildpack on Heroku Cedar (Manually)
 Setup Jekyll
 ---
 
-The first thing you have to do is install the jekyll gem.
+Install the jekyll gem.
 
     gem install jekyll
 

@@ -30,14 +30,10 @@ Install the Heroku gem
 
     gem install heroku
 
-Create a Heroku app
+Create a Heroku app using our custom buildpack
 
-    heroku create --stack cedar
+    heroku create --stack cedar --buildpack http://github.com/markpundsack/heroku-buildpack-jekyll.git
     
-Point Heroku to our custom buildpack
-
-    heroku config:add BUILDPACK_URL="http://github.com/markpundsack/heroku-buildpack-jekyll.git"
-
 Deploy!
 
     git push heroku master
@@ -117,13 +113,9 @@ Create a git repo and commit
     git add .
     git commit
 
-Create a Heroku app
+Create a Heroku app using our custom buildpack
 
-    heroku create --stack cedar
-
-Point Heroku to our custom buildpack
-
-    heroku config:add BUILDPACK_URL="http://github.com/markpundsack/heroku-buildpack-jekyll.git"
+    heroku create --stack cedar --buildpack http://github.com/markpundsack/heroku-buildpack-jekyll.git
 
 Deploy!
 
